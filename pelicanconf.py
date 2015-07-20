@@ -48,7 +48,7 @@ TAG_CLOUD_MAX_ITEMS = 30
 
 # extensions
 MD_EXTENSIONS = ['codehilite(css_class=highlight,linenums=False)']
-PLUGIN_PATHS = ['/home/manjaro/.pelican/pelican-plugins']
+PLUGIN_PATHS = ['plugins']
 PLUGINS = ['assets']
 
 THEME = "theme"

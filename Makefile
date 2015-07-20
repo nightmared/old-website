@@ -15,7 +15,7 @@ FTP_TARGET_DIR=/
 SSH_HOST=pi
 SSH_PORT=22
 SSH_USER=root
-SSH_TARGET_DIR=/srv/http/simonthoby.tk/
+SSH_TARGET_DIR=/srv/http/
 
 S3_BUCKET=my_s3_bucket
 
