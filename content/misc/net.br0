@@ -26,9 +26,14 @@ depend() {
 
 start() {
 	ebegin "Starting some network, nerd :)"
+	hostname "t0b1nux-arch"
 	ip link set dev lo up
 	init_bridge
 	ip route add default via $GATEWAY
+	echo "nameserver 80.67.169.12 
+nameserver 2001:910:800::12
+nameserver 89.234.141.66
+nameserver 2a00:5881:8100:1000::3" > /etc/resolv.conf
 	eend $?
 }
 
