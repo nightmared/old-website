@@ -6,21 +6,20 @@ UPDATE=0
 BUILD=1
 INSTALL=0
 
-
 should_continue() {
   if [ $? == 0 ]
   then
     touch $INSTALL_DIR/success
   else
     touch $INSTALL_DIR/failure
-    >&2 echo "Failed at step $1 !"
+    >&2 echo "Failed at step \"$1\" !"
     exit
   fi
 }
 
 cd $DEV_DIR
 
-rm -f $INSTALL_DIR{success,failure}
+rm -f $INSTALL_DIR/{success,failure,build.log,update.log,install.log}
 
 while getopts “unih?” OPTION
 do
@@ -40,21 +39,15 @@ do
      esac
 done
 
+# usage: exec_step BOOL NAME COMMAND
+exec_step() {
+  if [ "$1" == "1" ]
+  then
+    eval "$3 &> $INSTALL_DIR/$2.log"
+    should_continue "$2"
+  fi
+}
 
-if [ $UPDATE == 1 ]
-then
-  hg pull -u &> $INSTALL_DIR/update.log
-  should_continue "updating"
-fi
-
-if [ $BUILD == 1 ]
-then
-  ./mach build &> $INSTALL_DIR/build.log
-  should_continue "building"
-fi
-
-if [ $INSTALL == 1 ]
-then 
-  ./mach install &> $INSTALL_DIR/install.log
-  should_continue "installation"
-fi
+exec_step "$UPDATE" "update" "hg pull -u"
+exec_step "$BUILD" "build" "./mach build"
+exec_step "$INSTALL" "install"  "./mach install"
