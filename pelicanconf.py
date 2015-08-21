@@ -20,6 +20,7 @@ AUTHOR_FEED_RSS = None
 
 MENUITEMS = (('Home', ''),
              ('My Curriculum Vitae', 'cv'),
+             ('Contact', 'contact'),
              ('About', 'about'),
              )
 
