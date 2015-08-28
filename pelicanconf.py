@@ -29,10 +29,9 @@ SOCIAL = (('twitter', 'http://twitter.com/infouelec'),
 
 DEFAULT_PAGINATION = 10
 
-STATIC_PATHS = ['images', 'misc', 'themes/fonts', 'extras/robots.txt', 'extras/favicon.ico', 'CNAME']
+STATIC_PATHS = ['images', 'misc', 'themes/fonts', 'extras/robots.txt', 'favicon.png', 'CNAME']
 EXTRA_PATH_METADATA = {
     'extras/robots.txt': {'path': 'robots.txt'},
-    'extras/favicon.ico': {'path': 'favicon.ico'},
 }
 
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{slug}/'

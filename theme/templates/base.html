@@ -22,9 +22,7 @@
         <title>{% block title %}{{ SITENAME }} // {{ TAGLINE }}{% endblock title %}</title>
     {% endblock head %}
 
-    {% if FAVICON %}
-    <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon">
-    {% endif %}
+    <link href="{{ SITE_URL }}/favicon.png" rel="icon">
 
     {% assets filters="cssmin", output="style.min.css", "css/pure.css", "css/pure-min.css", "css/grids-responsive-min.css", "css/font-awesome.min.css" %}
       <link rel="stylesheet" href="/{{ ASSET_URL }}">
