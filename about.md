@@ -1,8 +1,7 @@
-Title: Who am I ?
-Date: 2015-07-27 15:22
-Slug: about
+# Who am I ?
 
 Hi,
+
 I'm Simon THOBY, a 17 years old student fascinated by computer sciences and physics (although I also enjoys maths).
 
 My main centers of interest, as already said, are physics (especially quantum physics), computer security (including cryptography), programming (in C++, Rust and sometimes shell scripts) and sci-phy.
