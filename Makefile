@@ -9,15 +9,15 @@ SUFFIXES: .md .html
 HEADER = header.html
 FOOTER = footer.html
 
-extra: $(EXTRA)
+extra: $(COPY)
 	@cp -R $? output/. && echo "--> \"$?\" were copied in output/"
 
-%.html: %.md $(HEADER) $(FOOTER)
-	@echo "MARKDOWN `basename $@`"
-	@$(MD) $< | cat $(HEADER) - $(FOOTER) > output/$@
+%: %.md $(HEADER) $(FOOTER)
+	@echo "Generate $@.html"
+	@$(MD) $< | cat $(HEADER) - $(FOOTER) > output/$@.html
 
 prepare: clean
-	@mkdir output && echo "--> folder output/ generated"
+	@mkdir output && echo "--> folder output/ created"
 
 clean:
 	@rm -rf output && echo "--> folder output/ deleted"

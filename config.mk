@@ -1,12 +1,9 @@
 MD      = /usr/bin/markdown_py
 
-NAME    = monochromatic
+NAME    = "Simon THOBY's homepage"
 PREFIX  = output
 
-PAGES	= index.html \
-	  about.html \
-	  cv.html \
-	  contact.html
+PAGES	= index about cv contact
 
-EXTRA	= css misc favicon.png imgs CNAME
+COPY	= css misc favicon.png imgs CNAME
 
