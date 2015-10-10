@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "* Generating the website"
-make clean && make
+make
 if [ $? == 0 ] 
 then
 	echo "* Uploading modification on Github pages"

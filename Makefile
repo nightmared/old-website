@@ -17,7 +17,7 @@ extra: $(COPY)
 	@$(MD) $< | cat $(HEADER) - $(FOOTER) > output/$@.html
 
 prepare: clean
-	@mkdir output && echo "--> folder output/ created"
+	@mkdir output && echo "--> output/ created"
 
 clean:
-	@rm -rf output && echo "--> folder output/ deleted"
+	@rm -rf output && echo "--> output/ deleted"
