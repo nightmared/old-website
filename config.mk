@@ -1,5 +1,3 @@
-MD      = /usr/bin/markdown_py3.4
-
 NAME    = "Simon THOBY's homepage"
 PREFIX  = output
 

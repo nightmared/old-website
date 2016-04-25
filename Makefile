@@ -10,11 +10,11 @@ HEADER = header.html
 FOOTER = footer.html
 
 extra: $(COPY)
-	@cp -R $? output/. && echo "--> \"$?\" were copied in output/"
+	@cp -R $? output/
 
-%: %.md $(HEADER) $(FOOTER)
+%: %.html $(HEADER) $(FOOTER)
 	@echo "Generate $@.html"
-	@$(MD) $< | cat $(HEADER) - $(FOOTER) > output/$@.html
+	@cat $< | cat $(HEADER) - $(FOOTER) > output/$@.html
 
 prepare: clean
 	@mkdir output && echo "--> output/ created"

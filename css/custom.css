@@ -1,5 +1,5 @@
 body {
-    color: #777;
+    color: #444;
 }
 
 .pure-img-responsive {
@@ -15,10 +15,7 @@ body {
 .content {
     margin: 0 auto;
     padding: 0 2em;
-    max-width: 90%;
     margin-bottom: 50px;
-    margin-left: 5%;
-    margin-right: 5%;
     line-height: 1.6em;
 }
 
@@ -35,7 +32,7 @@ body {
 }
 
 #menu a {
-	color: #999;
+	color: #F6F6F6;
 	border: none;
 	padding: 0.6em 0 0.6em 0.6em;
 }
