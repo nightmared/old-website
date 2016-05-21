@@ -1,86 +1,77 @@
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('FiraSans-Regular.woff2') format('woff2'),
+         url('FiraSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Fira Mono';
+    src: url('FiraMono-Regular.woff2') format('woff2'),
+         url('FiraMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+	}
+
+
 body {
-    color: #444;
+	color: #444;
+	min-height: 800px;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+	flex-flow: row;
+	font-family: "Fira Sans";
 }
 
-.pure-img-responsive {
-    max-width: 100%;
-    height: auto;
+header {
+	transition: all 0.3s ease-out;
+	flex: 1 1 20%;
+	background: #191818;
+	order: 0;
 }
 
-#layout {
-    position: relative;
-    padding-left: 0;
+body > article {
+	margin: 4px;
+	padding: 5px;
+	flex: 2 1 80%;
+	order: 1;
 }
 
-.content {
-    margin: 0 auto;
-    padding: 0 2em;
-    margin-bottom: 50px;
-    line-height: 1.6em;
+#menu-title {
+	font-size: 1.25rem;
+	font-weight: 400;
+	padding: 0em 0.5em 0.5em;
 }
 
-#menu {
-    margin-left: -300px; /* "#menu" width */
-    width: 300px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1000; /* so the menu or its navicon stays above all content */
-    background: #191818;
-    overflow-y: auto;
+.menu-item {
+	text-decoration: none;
+	color: #ffffff;
+	line-height: 1.6;
+	padding: 0.5em 0.5em;
+	display: block;
 }
 
-#menu a {
-	color: #F6F6F6;
-	border: none;
-	padding: 0.6em 0 0.6em 0.6em;
-}
-
-#menu .pure-menu,
-#menu .pure-menu ul {
-	border: none;
-	background: transparent;
-}
-
-#menu .pure-menu li a:hover,
-#menu .pure-menu li a:focus {
-    background: #333;
-}
-
-#menu .pure-menu-heading {
+.menu-item:hover {
 	background: #1f8dd6;
-	font-size: 110%;
-	color: #fff;
+}
+
+header ul {
+	border-top: 1px solid #333;
+	list-style: none;
+	padding: 0;
 	margin: 0;
 }
 
-.header,
-    .content {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
-
-    #layout {
-        padding-left: 300px; /* left col width "#menu" */
-        left: 0;
-    }
-    #menu {
-        left: 300px;
-    }
-
-
-@media (max-width: 48em) {
-  #layout {
-    padding-left: 0;
-  }
-
-  #menu {
-    position: relative;
-    width: 100%;
-  }
-
-  .pure-menu {
-    text-align: center;
-  }
+@media all and (max-width: 800px) {
+	body {
+		flex-direction: column;
+	}
+	header {
+		flex: none;
+	}
+	body > article {
+		order: 1;
+	}
 }
