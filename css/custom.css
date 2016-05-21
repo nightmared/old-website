@@ -12,12 +12,12 @@
          url('FiraMono-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-	}
+}
 
 
 body {
 	color: #444;
-	min-height: 800px;
+	min-height: 100vh;
 	margin: 0px;
 	padding: 0px;
 	display: flex;
