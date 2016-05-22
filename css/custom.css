@@ -70,6 +70,7 @@ header ul {
 	}
 	header {
 		flex: none;
+		text-align: center;
 	}
 	body > article {
 		order: 1;
