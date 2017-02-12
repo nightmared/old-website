@@ -7,5 +7,5 @@ then
 	echo "* Uploading modification on Github pages"
 	ghp-import -m "new revision" -b master output && git push origin master
   echo "* Uploading using ssh to the Raspberry Pi"
-  scp -r output/* turing:/srv/www/perso/.
+#  scp -r output/* turing:/srv/www/perso/.
 fi

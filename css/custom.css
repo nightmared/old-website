@@ -1,20 +1,3 @@
-@font-face{
-    font-family: 'Fira Sans';
-    src: url('FiraSans-Regular.woff2') format('woff2'),
-         url('FiraSans-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Mono';
-    src: url('FiraMono-Regular.woff2') format('woff2'),
-         url('FiraMono-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-
 body {
 	color: #444;
 	min-height: 100vh;
@@ -22,7 +5,6 @@ body {
 	padding: 0px;
 	display: flex;
 	flex-flow: row;
-	font-family: "Fira Sans";
 }
 
 header {
